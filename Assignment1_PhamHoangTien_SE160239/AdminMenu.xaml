@@ -1,0 +1,234 @@
+﻿<Window x:Class="Assignment1_PhamHoangTien_SE160239.AdminMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:Assignment1_PhamHoangTien_SE160239"
+        mc:Ignorable="d"
+        Title="ManagerMenu"
+        Height="720" Width="1080" WindowStartupLocation="CenterScreen" AllowsTransparency="True"
+        Background="Transparent" WindowStyle="None">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+    </Window.Resources>
+
+    <Border CornerRadius="10" Background="#EFF2F7" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Left Menu-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--Menu Icon-->
+                <Canvas HorizontalAlignment="Left" Margin="20 40 0 35">
+                </Canvas>
+
+                <Border Grid.Row="1" Background="#679F7B" CornerRadius="0 50 0 10">
+                    <DockPanel>
+                        <!--Menu Logo-->
+                        <Border Width="80" Height="80" Padding="3" Background="Gray" CornerRadius="100" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20 -30 0 0">
+
+                            <Image Source="pack://application:,,,/Images/Logo.png" Margin="-119,-29,-121,-28" />
+                        </Border>
+
+                        <!--Menu Titles-->
+                        <TextBlock Text="Employee" Foreground="White" FontSize="18" FontWeight="SemiBold" DockPanel.Dock="Top" Margin="5 25 0 10" TextAlignment="Center"/>
+                        <TextBlock Text="Management" Foreground="White" FontSize="20" FontWeight="SemiBold" DockPanel.Dock="Top" TextAlignment="Center"/>
+
+                        <!--Menu Seprator-->
+                        <Separator Margin="25" Background="#447B58" DockPanel.Dock="Top" Height="0.8"/>
+
+                        <!--Menu Buttons-->
+                        <StackPanel DockPanel.Dock="Top" >
+                            <Button x:Name="AccountsButton" Click="AccountsButton_Click" Style="{StaticResource menuButton}" IsDefault="True">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="AccountMultiple" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Accounts"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button x:Name="JobButton" Click="JobButton_Click" Style="{StaticResource menuButton}" >
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="Briefcase" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Job"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="DepartmentButton" Click="DepartmentButton_Click" Style="{StaticResource menuButton}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Kind="OfficeBuilding" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Department"/>
+                                </StackPanel>
+                            </Button>
+
+                        </StackPanel>
+
+                        <Button Click="LogoutButton_Click" Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Margin="15 0 15 20">
+                            <StackPanel Orientation="Horizontal">
+                                <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Logout"/>
+                            </StackPanel>
+                        </Button>
+
+                    </DockPanel>
+                </Border>
+
+            </Grid>
+
+            <!--Main Section-->
+            <Grid Grid.Column="1" Margin="30 20 20 20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <!--Top Buttons-->
+                <Button Style="{StaticResource topButton}" Margin="0 0 20 0" Click="Button_Close_Click">
+                    <Icon:PackIconMaterial Kind="Close"/>
+                </Button>
+
+
+                <!--Add Button-->
+                <Button x:Name="addAccountButton" Style="{StaticResource addButton}" Click="AddAccountButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Margin="0 1 8 0" Width="11" Height="11"/>
+                        <TextBlock Text="Add New Account"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="addJobButton" Visibility="Collapsed" Style="{StaticResource addButton}" Click="AddJobButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Margin="0 1 8 0" Width="11" Height="11"/>
+                        <TextBlock Text="Add New Job"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="addDepartmentButton" Visibility="Collapsed" Style="{StaticResource addButton}" Click="AddDepartmentButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Margin="0 1 8 0" Width="11" Height="11"/>
+                        <TextBlock Text="Add New Department"/>
+                    </StackPanel>
+                </Button>
+
+                <!--Filter Textbox-->
+                <Grid x:Name="searchAccountGrid" Width="200" Margin="0 0 -430 0" Grid.Row="4">
+                    <ComboBox Name="cbSearch" Style="{StaticResource customComboBox}" SelectedIndex="0" Margin="-98,0,0,0">
+                        <ComboBoxItem Content="By Email" Tag="Email"/>
+                        <ComboBoxItem Content="By Name" Tag="Name"/>
+                    </ComboBox>
+                    <TextBlock Margin="15 0" VerticalAlignment="Center" Foreground="#B0B9C6" IsHitTestVisible="False"
+                           Panel.ZIndex="1" />
+                    <TextBox Name="txtSearch" Style="{StaticResource filterTextBox}"/>
+                    <Button Click="SearchAccount_Click" Margin="0 0 -100 0" Style="{StaticResource searchButton}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Search"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <!--Accounts Data Grid-->
+                <DataGrid x:Name="accountsDataGrid" RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Style="{DynamicResource DataGridStyle1}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Username" Binding="{Binding Username}" IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="Email" Binding="{Binding Email}" IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="Fullname" Binding="{Binding FullName}" IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="Phone Number" Binding="{Binding PhoneNumber}" IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="Role" Binding="{Binding Role}" IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="Street" Binding="{Binding Address.Street}" IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="Province" Binding="{Binding Address.Province}" IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="City" Binding="{Binding Address.City}" IsReadOnly="True" Width="*"/>
+                        <DataGridTextColumn Header="Ward" Binding="{Binding Address.Ward}" IsReadOnly="True" Width="*"/>
+                        <DataGridTemplateColumn Header="Operations" IsReadOnly="True" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Click="ChangeAccountInfoButton_Click" Style="{StaticResource gridEditButton}">
+                                            <Button.ToolTip>
+                                                <ToolTip>
+                                                    <TextBlock Text="Update information" />
+                                                </ToolTip>
+                                            </Button.ToolTip>
+                                            <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource gridButtonIcon}"/>
+                                        </Button>
+                                        <Button Click="ViewJobHistoryButton_Click" Style="{StaticResource gridEditButton}" Margin="10 0">
+                                            <Button.ToolTip>
+                                                <ToolTip>
+                                                    <TextBlock Text="Job History" />
+                                                </ToolTip>
+                                            </Button.ToolTip>
+                                            <Icon:PackIconMaterial Kind="History" Style="{StaticResource gridButtonIcon}"/>
+                                        </Button>
+                                        <Button Click="DeleteAccountButton_Click" Style="{StaticResource gridEditButton}">
+                                            <Button.ToolTip>
+                                                <ToolTip>
+                                                    <TextBlock Text="Delete account" />
+                                                </ToolTip>
+                                            </Button.ToolTip>
+                                            <Icon:PackIconMaterial Kind="Delete" Style="{StaticResource gridButtonIcon}"/>
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                
+                <!--Job Data Grid-->
+                <DataGrid x:Name="jobGrid" Visibility="Collapsed" RowStyle="{DynamicResource DataGridRowStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}"  Style="{DynamicResource DataGridStyle1}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Job Title" Binding="{Binding JobTitle}" Width="*"/>
+                        <DataGridTextColumn Header="Salary" Binding="{Binding Salary}" Width="*"/>
+                        <DataGridTemplateColumn Header="Operations" IsReadOnly="True" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Click="UpdateJobButton_Click" Style="{StaticResource gridEditButton}">
+                                            <Button.ToolTip>
+                                                <ToolTip Content="Update"/>
+                                            </Button.ToolTip>
+                                            <Icon:PackIconMaterial Kind="Publish" Style="{StaticResource gridButtonIcon}"/>
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!--Department Data Grid-->
+                <DataGrid x:Name="deparmentGrid" Visibility="Collapsed" RowStyle="{DynamicResource DataGridRowStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}"  Style="{DynamicResource DataGridStyle1}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Department Name" Binding="{Binding DepartmentName}" IsReadOnly="True" Width="*"/>
+                        <DataGridTemplateColumn Header="Operations" IsReadOnly="True" Width="auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Click="UpdateDepartmentButton_Click" Style="{StaticResource gridEditButton}">
+                                            <Button.ToolTip>
+                                                <ToolTip Content="Update"/>
+                                            </Button.ToolTip>
+                                            <Icon:PackIconMaterial Kind="Publish" Style="{StaticResource gridButtonIcon}"/>
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+        </Grid>
+    </Border>
+</Window>

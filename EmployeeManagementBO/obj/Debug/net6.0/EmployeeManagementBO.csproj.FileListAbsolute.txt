@@ -1,0 +1,15 @@
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\bin\Debug\net6.0\appsettings.json
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\bin\Debug\net6.0\EmployeeManagementBO.deps.json
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\bin\Debug\net6.0\EmployeeManagementBO.runtimeconfig.json
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\bin\Debug\net6.0\EmployeeManagementBO.dll
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\bin\Debug\net6.0\EmployeeManagementBO.pdb
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\obj\Debug\net6.0\EmployeeManagementBO.csproj.AssemblyReference.cache
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\obj\Debug\net6.0\EmployeeManagementBO.GeneratedMSBuildEditorConfig.editorconfig
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\obj\Debug\net6.0\EmployeeManagementBO.AssemblyInfoInputs.cache
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\obj\Debug\net6.0\EmployeeManagementBO.AssemblyInfo.cs
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\obj\Debug\net6.0\EmployeeManagementBO.csproj.CoreCompileInputs.cache
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\obj\Debug\net6.0\EmployeeManagementBO.dll
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\obj\Debug\net6.0\refint\EmployeeManagementBO.dll
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\obj\Debug\net6.0\EmployeeManagementBO.pdb
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\obj\Debug\net6.0\EmployeeManagementBO.genruntimeconfig.cache
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementBO\obj\Debug\net6.0\ref\EmployeeManagementBO.dll

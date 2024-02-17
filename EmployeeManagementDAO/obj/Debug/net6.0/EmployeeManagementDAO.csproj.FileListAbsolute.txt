@@ -1,0 +1,16 @@
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\bin\Debug\net6.0\appsettings.json
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\bin\Debug\net6.0\EmployeeManagementDAO.deps.json
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\bin\Debug\net6.0\EmployeeManagementDAO.dll
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\bin\Debug\net6.0\EmployeeManagementDAO.pdb
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\bin\Debug\net6.0\EmployeeManagementBO.dll
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\bin\Debug\net6.0\EmployeeManagementBO.pdb
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\obj\Debug\net6.0\EmployeeManagementDAO.csproj.AssemblyReference.cache
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\obj\Debug\net6.0\EmployeeManagementDAO.GeneratedMSBuildEditorConfig.editorconfig
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\obj\Debug\net6.0\EmployeeManagementDAO.AssemblyInfoInputs.cache
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\obj\Debug\net6.0\EmployeeManagementDAO.AssemblyInfo.cs
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\obj\Debug\net6.0\EmployeeManagementDAO.csproj.CoreCompileInputs.cache
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\obj\Debug\net6.0\EmployeeManagementDAO.csproj.CopyComplete
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\obj\Debug\net6.0\EmployeeManagementDAO.dll
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\obj\Debug\net6.0\refint\EmployeeManagementDAO.dll
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\obj\Debug\net6.0\EmployeeManagementDAO.pdb
+E:\SEMESTER6\PRN221\Assignment1_PhamHoangTien_SE160239\EmployeeManagementDAO\obj\Debug\net6.0\ref\EmployeeManagementDAO.dll
