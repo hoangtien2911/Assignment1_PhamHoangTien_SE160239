@@ -111,7 +111,7 @@ namespace Assignment1_PhamHoangTien_SE160239 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Assignment1_PhamHoangTien_SE160239;component/usermenu.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Assignment1_PhamHoangTien_SE160239;V1.0.0.0;component/usermenu.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\UserMenu.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -61,7 +61,7 @@ namespace Assignment1_PhamHoangTien_SE160239 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Assignment1_PhamHoangTien_SE160239;component/jobhistorydialog.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Assignment1_PhamHoangTien_SE160239;V1.0.0.0;component/jobhistorydialog.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\JobHistoryDialog.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
