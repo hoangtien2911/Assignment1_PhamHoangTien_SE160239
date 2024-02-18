@@ -24,6 +24,7 @@ public interface IJobHistoryService
     /// <summary>
     /// Retrieves all jobHistory include Job and depa from the database.
     /// </summary>
+    /// <param name="employeeId">The employee id to get job histories.</param>
     /// <returns>An IEnumerable of all jobHistory.</returns>
     IEnumerable<JobHistory> GetAllJobHistoryIncludeJobAndDepartmentByEmployeeId(int employeeId);
 

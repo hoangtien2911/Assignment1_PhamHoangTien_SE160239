@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment1_PhamHoangTien_SE160239", "Assignment1_PhamHoangTien_SE160239\Assignment1_PhamHoangTien_SE160239.csproj", "{2ABC8E8F-8FBB-419B-A120-DFC8D6C65153}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagementBO", "EmployeeManagementBO\EmployeeManagementBO.csproj", "{F6B870E2-787B-4070-A82C-B0509FCC2B32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementBO", "EmployeeManagementBO\EmployeeManagementBO.csproj", "{F6B870E2-787B-4070-A82C-B0509FCC2B32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagementDAO", "EmployeeManagementDAO\EmployeeManagementDAO.csproj", "{69DCBC44-EFCB-463C-8D4C-8E90559D1636}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementDAO", "EmployeeManagementDAO\EmployeeManagementDAO.csproj", "{69DCBC44-EFCB-463C-8D4C-8E90559D1636}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagementRepository", "EmployeeManagementRepository\EmployeeManagementRepository.csproj", "{C8F99970-CA1F-4DC8-8822-0EFFFF648D6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementRepository", "EmployeeManagementRepository\EmployeeManagementRepository.csproj", "{C8F99970-CA1F-4DC8-8822-0EFFFF648D6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagementService", "EmployeeManagementService\EmployeeManagementService.csproj", "{AA193A42-FC93-4881-810D-D756B1C3098D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementService", "EmployeeManagementService\EmployeeManagementService.csproj", "{AA193A42-FC93-4881-810D-D756B1C3098D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagementWPF", "EmployeeManagementWPF\EmployeeManagementWPF.csproj", "{689D387F-C96B-401B-814F-5A6F2D6432B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2ABC8E8F-8FBB-419B-A120-DFC8D6C65153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2ABC8E8F-8FBB-419B-A120-DFC8D6C65153}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2ABC8E8F-8FBB-419B-A120-DFC8D6C65153}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2ABC8E8F-8FBB-419B-A120-DFC8D6C65153}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6B870E2-787B-4070-A82C-B0509FCC2B32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6B870E2-787B-4070-A82C-B0509FCC2B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6B870E2-787B-4070-A82C-B0509FCC2B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{AA193A42-FC93-4881-810D-D756B1C3098D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA193A42-FC93-4881-810D-D756B1C3098D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA193A42-FC93-4881-810D-D756B1C3098D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{689D387F-C96B-401B-814F-5A6F2D6432B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{689D387F-C96B-401B-814F-5A6F2D6432B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{689D387F-C96B-401B-814F-5A6F2D6432B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{689D387F-C96B-401B-814F-5A6F2D6432B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

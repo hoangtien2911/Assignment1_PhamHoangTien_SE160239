@@ -39,6 +39,7 @@ public class EmployeeService : IEmployeeService
     /// <summary>
     /// Get employee by username from the database.
     /// </summary>
+    /// <param name="username">The username of the account.</param>
     /// <returns>An employee, otherwise null</returns>    
     public Employee? GetEmployeeByUserName(string username)
     {
@@ -57,6 +58,7 @@ public class EmployeeService : IEmployeeService
     /// <summary>
     /// Retrieves all employee by email include account department job from the database.
     /// </summary>
+    /// <param name="email">The email to search for in employee records.</param>
     /// <returns>An IEnumerable of all employee.</returns>
     public IEnumerable<Employee> GetAllByEmailIncludeAccountDepartmentJob(string email)
     {
@@ -66,6 +68,7 @@ public class EmployeeService : IEmployeeService
     /// <summary>
     /// Retrieves all employee by name include account department job from the database.
     /// </summary>
+    /// <param name="name">The name to search for in account records.</param>
     /// <returns>An IEnumerable of all employee.</returns>
     public IEnumerable<Employee> GetAllByNameIncludeAccountDepartmentJob(string name)
     {
@@ -75,6 +78,7 @@ public class EmployeeService : IEmployeeService
     /// <summary>
     /// Get employee by username include job and department information from the database.
     /// </summary>
+    /// <param name="username">The username of the account.</param>
     /// <returns>An employee.</returns>    
     public Employee? GetEmployeeByUserNameIncludeJobAndDepartment(string username)
     {
@@ -84,6 +88,7 @@ public class EmployeeService : IEmployeeService
     /// <summary>
     /// Get employee by username include account job and department information from the database.
     /// </summary>
+    /// <param name="username">The username of the account.</param>
     /// <returns>An employee.</returns>    
     public Employee GetEmployeeByUserNameIncludeAccountJobAndDepartment(string username)
     {
