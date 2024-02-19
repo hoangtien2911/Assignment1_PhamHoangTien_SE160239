@@ -68,11 +68,12 @@ public partial class AddAccountDialog : Window
         }
         account.Username = username;
 
-        //Validate password
+        // Validate password
         var password = txtPassword.Text.Trim();
-        if (string.IsNullOrEmpty(password) && password.Length <= 8)
+        Regex regex = new Regex(@"^(?=.*[A-Z])(?=.*\W).{8,}$"); // At least one uppercase letter, one special character, and minimum 8 characters
+        if (!regex.IsMatch(password))
         {
-            MessageBox.Show("Please input password with length > 8!", "Error Input", MessageBoxButton.OK);
+            MessageBox.Show("Please input password with min length 8 characters, containing at least one uppercase letter and one special character!", "Error Input", MessageBoxButton.OK);
             return null;
         }
         account.Password = password;

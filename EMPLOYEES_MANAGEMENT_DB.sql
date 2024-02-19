@@ -156,7 +156,7 @@ INSERT INTO ACCOUNT (
     [ROLE]
 ) VALUES (
     'tienph',
-    '123',
+    '12345678',
     'tienph@gmail.com',
     'Pham Hoang Tien',
     '123456789',
@@ -172,9 +172,9 @@ INSERT INTO ACCOUNT (
     [ROLE]
 ) VALUES (
     'tupht',
-    '123',
-    'tienph@gmail.com',
-    'Pham Hoang Tien',
+    '12345678',
+    'tupht@gmail.com',
+    'Pham Hoang Thanh Tu',
     '123456789',
     'User'
 );
@@ -189,64 +189,39 @@ INSERT INTO ACCOUNT (
     [ROLE]
 ) VALUES (
     'manager',
-    '123',
+    '12345678',
     'manager@gmail.com',
     'Pham Hoang Tien',
     '123456789',
     'Manager'
 );
 
--- Inserting sample data into the ADDRESS table
-INSERT INTO [ADDRESS] (STREET, PROVINCE, CITY, WARD, UPDATED_DATE)
-VALUES 
-    ('123 Main St', 'Ontario', 'Toronto', 'Downtown', '2024-02-07 10:00:00'),
-    ('456 Elm St', 'California', 'Los Angeles', 'Hollywood', '2024-02-07 10:00:00'),
-    ('789 Oak St', 'New York', 'New York City', 'Manhattan', '2024-02-07 10:00:00');
-
-
-
-
-UPDATE ACCOUNT SET ADDRESS_ID = 1 WHERE USERNAME = 'tienph'
+INSERT INTO ACCOUNT (
+    USERNAME,
+    [PASSWORD],
+    EMAIL,
+    FULL_NAME,
+    PHONE_NUMBER,
+    [ROLE]
+) VALUES (
+    'admin',
+    '12345678',
+    'admin@gmail.com',
+    'Pham Hoang Tien',
+    '123456789',
+    'Admin'
+);
 
 INSERT INTO JOB (JOB_TITLE, SALARY)
 VALUES 
-    ('Developer', 80000),
-    ('Data Analyst', 70000),
-    ('Project Manager', 90000);
+    ('Developer', 1500),
+    ('Data Analyst', 1200),
+    ('Project Manager', 2000),
+	('Sales Representative', 1000),
+	('Marketing Specialist', 1100);	
 INSERT INTO DEPARTMENT (DEPARTMENT_NAME)
 VALUES 
     ('Human Resources'),
-    ('Finance'),
+    ('Sales'),
     ('Marketing'),
 	('Software Engineer');
-
-INSERT INTO EMPLOYEE (HIRED_DATE, USERNAME, DEPARTMENT_ID, JOB_ID)
-VALUES 
-    ('2023-01-15', 'tienph', 12, 7);
-INSERT INTO EMPLOYEE (HIRED_DATE, USERNAME, DEPARTMENT_ID, JOB_ID)
-VALUES 
-    ('2023-01-15', 'tupht', 12, 7);
-
-
-DELETE FROM JOB_HISTORY;
-INSERT INTO JOB_HISTORY (STARTED_DATE, ENDED_DATE, JOB_ID, DEPARTMENT_ID, EMPLOYEE_ID)
-VALUES ('2023-01-01', '2024-01-01', 7, 12, 6);
-INSERT INTO JOB_HISTORY (STARTED_DATE, ENDED_DATE, JOB_ID, DEPARTMENT_ID, EMPLOYEE_ID)
-VALUES ('2022-01-01', '2023-01-01', 8, 12, 6);
-INSERT INTO JOB_HISTORY (STARTED_DATE, JOB_ID, DEPARTMENT_ID, EMPLOYEE_ID)
-VALUES ('2024-01-01', 7, 12, 6);
-SELECT * FROM JOB_HISTORY
-
-SELECT * FROM ACCOUNT
-SELECT * FROM EMPLOYEE
-SELECT * FROM JOB
-SELECT * FROM DEPARTMENT
-SELECT * FROM [ADDRESS]
-
-SELECT * FROM DEPARTMENT
-SELECT * FROM JOB
-UPDATE ACCOUNT SET EMAIL = 'tupht@gmail.com' WHERE USERNAME = 'tupht'
-DELETE FROM EMPLOYEE WHERE USERNAME = 'tupht'
-
-UPDATE EMPLOYEE SET JOB_ID = 7 WHERE EMPLOYEE_ID = 6
-UPDATE ACCOUNT SET DELETE_FLAG = 0 WHERE USERNAME = 'test'

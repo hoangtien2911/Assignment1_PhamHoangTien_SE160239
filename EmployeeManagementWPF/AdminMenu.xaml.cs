@@ -122,11 +122,18 @@ public partial class AdminMenu : Window
         
         if (account != null && account.Role.ToLower() == "user")
         {
-            var employee = _accountService.FindAccountIncludeEmployeeByUsername(account.Username).Employee;
-            var jobHistories = _jobHistoryService.GetAllJobHistoryIncludeJobAndDepartmentByEmployeeId(employee.EmployeeId);
-            _jobHistoryDialog = new JobHistoryDialog();
-            _jobHistoryDialog.jobHistoryGrid.ItemsSource = jobHistories;
-            _jobHistoryDialog.Show();
+            var employee = _accountService.FindAccountIncludeEmployeeByUsername(account.Username).Employee;            
+            if (employee != null)
+            {
+                var jobHistories = _jobHistoryService.GetAllJobHistoryIncludeJobAndDepartmentByEmployeeId(employee.EmployeeId);
+                _jobHistoryDialog = new JobHistoryDialog();
+                _jobHistoryDialog.jobHistoryGrid.ItemsSource = jobHistories;
+                _jobHistoryDialog.Show();
+            } else
+            {
+                MessageBox.Show(account.Username + " is not yet an employee.");
+            }
+            
         }
         else
         {            
