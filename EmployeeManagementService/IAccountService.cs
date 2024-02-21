@@ -75,4 +75,11 @@ public interface IAccountService
     /// <param name="account">The account object to be updated.</param>
     /// <returns>True if the account is successfully updated, otherwise false.</returns>
     bool Update(Account account);
+
+    /// <summary>
+    /// Check existing account email by email in the database.
+    /// </summary>
+    /// <param name="email">The email to be checked.</param>
+    /// <returns>True if the email existed, otherwise false.</returns>
+    bool IsExistedEmail(String email);
 }

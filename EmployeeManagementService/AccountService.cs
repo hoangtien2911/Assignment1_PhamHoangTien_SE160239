@@ -114,4 +114,14 @@ public class AccountService : IAccountService
     {
         return accountRepo.GetAllInclude().Include(a => a.Address).Where(a => a.Email.Contains(email) && a.DeleteFlag.Equals(0) && !a.Role.Equals("Admin")).ToList();
     }
+
+    /// <summary>
+    /// Check existing account email by email in the database.
+    /// </summary>
+    /// <param name="email">The email to be checked.</param>
+    /// <returns>True if the email existed, otherwise false.</returns>
+    public bool IsExistedEmail(String email)
+    {
+        return accountRepo.GetAll().Any(a => a.Email.Equals(email));
+    }
 }

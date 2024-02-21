@@ -38,6 +38,13 @@ public partial class AddAccountDialog : Window
             {
                 account.Role = "Manager";
             }
+            //Check exist email
+            if (_accountService.IsExistedEmail(account.Email))
+            {
+                MessageBox.Show("Email already exist. Please input another email!", "Info", MessageBoxButton.OK);
+                return;
+            }
+
             bool isCreated = _accountService.Create(account);
             if (isCreated)
             {
