@@ -128,7 +128,7 @@ public partial class AdminMenu : Window
                 var jobHistories = _jobHistoryService.GetAllJobHistoryIncludeJobAndDepartmentByEmployeeId(employee.EmployeeId);
                 _jobHistoryDialog = new JobHistoryDialog();
                 _jobHistoryDialog.jobHistoryGrid.ItemsSource = jobHistories;
-                _jobHistoryDialog.Show();
+                _jobHistoryDialog.ShowDialog();
             } else
             {
                 MessageBox.Show(account.Username + " is not yet an employee.");

@@ -75,7 +75,7 @@ public partial class ManagerMenu : Window
         // Access the DataContext of the button to get the associated data item
         Employee employee = clickedButton.DataContext as Employee;
         _updateEmployeeDialog = new UpdateEmployeeDialog(employee, _jobService, _departmentService, _jobHistoryService, _employeeService, _addressService, _accountService, this);
-        _updateEmployeeDialog.Show();
+        _updateEmployeeDialog.ShowDialog();
     }
 
     private void JobButton_Click(object sender, RoutedEventArgs e)
@@ -132,7 +132,7 @@ public partial class ManagerMenu : Window
             var jobHistories = _jobHistoryService.GetAllJobHistoryIncludeJobAndDepartmentByEmployeeId(employee.EmployeeId);
             _jobHistoryDialog = new JobHistoryDialog();
             _jobHistoryDialog.jobHistoryGrid.ItemsSource = jobHistories;
-            _jobHistoryDialog.Show();
+            _jobHistoryDialog.ShowDialog();
         }
     }    
 
