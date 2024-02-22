@@ -12,8 +12,8 @@ namespace EmployeeManagementWPF;
 /// </summary>
 public partial class ChangeInformationDialog : Window
 {
-    private IAccountService _accountService;
-    private IAddressService _addressService;
+    private readonly IAccountService _accountService;
+    private readonly IAddressService _addressService;
     private Account _currentAccount;
     private UserMenu _userMenu;
     private ManagerMenu _managerMenu;

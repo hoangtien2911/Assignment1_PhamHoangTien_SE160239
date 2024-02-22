@@ -3,6 +3,8 @@ using EmployeeManagementService;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net;
+using System.Security.Principal;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
@@ -14,12 +16,12 @@ namespace EmployeeManagementWPF;
 /// </summary>
 public partial class UpdateEmployeeDialog : Window
 {
-    private IJobService _jobService;
-    private IDepartmentService _departmentService;
-    private IJobHistoryService _jobHistoryService;
-    private IEmployeeService _employeeService;
-    private IAddressService _addressService;
-    private IAccountService _accountService;
+    private readonly IJobService _jobService;
+    private readonly IDepartmentService _departmentService;
+    private readonly IJobHistoryService _jobHistoryService;
+    private readonly IEmployeeService _employeeService;
+    private readonly IAddressService _addressService;
+    private readonly IAccountService _accountService;
     private ManagerMenu _managerMenu;
     public Employee CurrentEmployee { get; set; }
     public ObservableCollection<Department> Departments { get; set; }
@@ -62,12 +64,15 @@ public partial class UpdateEmployeeDialog : Window
         if (employee != null)
         {
             if (employee.Account != null)
-            {
-                _accountService.Update(employee.Account);
-                if (employee.Account.Address != null)
+            {                
+                if (employee.Account.Address != null && employee.Account.AddressId != null)
                 {
                     _addressService.Update(employee.Account.Address);
+                } else if (employee.Account.Address != null && employee.Account.AddressId == null)
+                {
+                    employee.Account.AddressId = _addressService.Create(employee.Account.Address)?.AddressId;
                 }
+                _accountService.Update(employee.Account);
             }            
             Job? job = cbJob.SelectedItem as Job;
             Department? department = cbDepartment.SelectedItem as Department;
@@ -86,14 +91,13 @@ public partial class UpdateEmployeeDialog : Window
                     newJobHistory.StartedDate = DateTime.Now;
                     newJobHistory.JobId = job.JobId;
                     newJobHistory.DepartmentId = department.DepartmentId;
-                    newJobHistory.EmployeeId = employee.EmployeeId;
-                    //employee.JobHistories.Add(newJobHistory);
+                    newJobHistory.EmployeeId = employee.EmployeeId;                    
                     //Update employee data
                     _jobHistoryService.Create(newJobHistory);                    
-                    var newDepartmentEmp = _employeeService.GetEmployeeByUserName(employee.Username);
-                    newDepartmentEmp.JobId = job.JobId;                    
-                    newDepartmentEmp.DepartmentId = department.DepartmentId;
-                    _employeeService.Update(newDepartmentEmp);       
+                    var employeeUpdate = _employeeService.GetEmployeeByUserName(employee.Username);
+                    employeeUpdate.JobId = job.JobId;                    
+                    employeeUpdate.DepartmentId = department.DepartmentId;
+                    _employeeService.Update(employeeUpdate);       
                 }
             }
             

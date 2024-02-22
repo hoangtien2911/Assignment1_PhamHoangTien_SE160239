@@ -13,15 +13,15 @@ namespace EmployeeManagementWPF;
 /// </summary>
 public partial class UserMenu : Window
 {
-    private IAccountService _accountService;    
-    private IEmployeeService _employeeService;
-    private IJobHistoryService _jobHistoryService;
-    private IAddressService _addressService;
+    private readonly IAccountService _accountService;    
+    private readonly IEmployeeService _employeeService;
+    private readonly IJobHistoryService _jobHistoryService;
+    private readonly IAddressService _addressService;
     private ChangeInformationDialog _changeInformationDialog;
     private Account _currentAccount;
     private Login _login;
-    public ManagerMenu _managerMenu;
-    public AdminMenu _adminMenu;
+    private ManagerMenu _managerMenu;
+    private AdminMenu _adminMenu;
 
     public UserMenu(IAccountService accountService, IEmployeeService employeeService, IJobHistoryService jobHistoryService, IAddressService addressService)
     {

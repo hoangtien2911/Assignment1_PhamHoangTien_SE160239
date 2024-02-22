@@ -16,12 +16,12 @@ namespace EmployeeManagementWPF;
 /// </summary>
 public partial class ManagerMenu : Window
 {
-    private IEmployeeService _employeeService;
-    private IAccountService _accountService;
-    private IAddressService _addressService;
-    private IJobService _jobService;
-    private IDepartmentService _departmentService;  
-    private IJobHistoryService _jobHistoryService;
+    private readonly IEmployeeService _employeeService;
+    private readonly IAccountService _accountService;
+    private readonly IAddressService _addressService;
+    private readonly IJobService _jobService;
+    private readonly IDepartmentService _departmentService;  
+    private readonly IJobHistoryService _jobHistoryService;
     private Account _currentAccount;
     private ChangeInformationDialog _changeInformationDialog;
     private AddEmployeeDialog _addEmployeeDialog;

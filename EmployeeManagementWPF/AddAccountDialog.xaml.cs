@@ -13,7 +13,7 @@ namespace EmployeeManagementWPF;
 /// </summary>
 public partial class AddAccountDialog : Window
 {
-    private IAccountService _accountService;
+    private readonly IAccountService _accountService;
     private AdminMenu _adminMenu;
     public AddAccountDialog(IAccountService accountService, AdminMenu adminMenu)
     {

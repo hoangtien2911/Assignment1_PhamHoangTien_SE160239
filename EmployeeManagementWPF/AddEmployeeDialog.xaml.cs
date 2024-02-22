@@ -12,11 +12,11 @@ namespace EmployeeManagementWPF;
 /// </summary>
 public partial class AddEmployeeDialog : Window
 {
-    private IAccountService _accountService;   
-    private IJobService _jobService;
-    private IJobHistoryService _jobHistoryService;
-    private IDepartmentService _departmentService;
-    private IEmployeeService _employeeService;
+    private readonly IAccountService _accountService;   
+    private readonly IJobService _jobService;
+    private readonly IJobHistoryService _jobHistoryService;
+    private readonly IDepartmentService _departmentService;
+    private readonly IEmployeeService _employeeService;
     private ManagerMenu _managerMenu;
     public AddEmployeeDialog(IAccountService accountService, IDepartmentService departmentService, IJobService jobService, IJobHistoryService jobHistoryService, IEmployeeService employeeService, ManagerMenu managerMenu)
     {

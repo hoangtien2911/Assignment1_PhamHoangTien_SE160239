@@ -9,7 +9,7 @@ namespace EmployeeManagementWPF
     /// </summary>
     public partial class Login : Window
     {
-        private IAccountService _accountService;
+        private readonly IAccountService _accountService;
         private UserMenu _userMenu;
         private ManagerMenu _managerMenu;
         private AdminMenu _adminMenu;

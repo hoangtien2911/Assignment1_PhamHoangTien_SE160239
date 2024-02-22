@@ -21,11 +21,11 @@ namespace EmployeeManagementWPF;
 /// </summary>
 public partial class AdminMenu : Window
 {
-    private IAccountService _accountService;
-    private IJobService _jobService;
-    private IDepartmentService _departmentService;
-    private IAddressService _addressService;
-    private IJobHistoryService _jobHistoryService;
+    private readonly IAccountService _accountService;
+    private readonly IJobService _jobService;
+    private readonly IDepartmentService _departmentService;
+    private readonly IAddressService _addressService;
+    private readonly IJobHistoryService _jobHistoryService;
     private AddAccountDialog _addAccountDialog;
     private JobInfoDialog _jobInfoDialog;
     private DepartmentInfoDialog _departmentInfoDialog;

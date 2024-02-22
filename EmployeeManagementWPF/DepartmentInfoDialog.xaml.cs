@@ -11,7 +11,7 @@ namespace EmployeeManagementWPF;
 public partial class DepartmentInfoDialog : Window
 {
 
-    private IDepartmentService _departmentService;
+    private readonly IDepartmentService _departmentService;
     private AdminMenu _adminMenu;
     private Department _currentDepartment;
 

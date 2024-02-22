@@ -10,7 +10,7 @@ namespace EmployeeManagementWPF;
 /// </summary>
 public partial class JobInfoDialog : Window
 {
-    private IJobService _jobService;
+    private readonly IJobService _jobService;
     private AdminMenu _adminMenu;
     private Job _currentJob;
 
